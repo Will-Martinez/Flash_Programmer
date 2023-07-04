@@ -1,0 +1,17 @@
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.exe
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.deps.json
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.runtimeconfig.json
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.dll
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.pdb
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.AssemblyReference.cache
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.Form1.resources
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.GenerateResource.cache
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.AssemblyInfoInputs.cache
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.AssemblyInfo.cs
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.CoreCompileInputs.cache
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.dll
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\refint\OneRF_CATM.dll
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.pdb
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.genruntimeconfig.cache
+C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\ref\OneRF_CATM.dll
