@@ -12,6 +12,9 @@ using Zebra.Sdk.Comm;
 using Zebra.Sdk.Printer;
 using Zebra.Sdk.Printer.Discovery;
 using System.IO;
+using System.Windows.Forms.VisualStyles;
+using System.Text.RegularExpressions;
+using System.Reflection.Metadata.Ecma335;
 
 namespace OneRF_CATM
 {
@@ -20,18 +23,26 @@ namespace OneRF_CATM
         public Form1()
         {
             InitializeComponent();
-            logBox.ReadOnly = true;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            ClearBtn.Enabled = false;
             logBox.Enabled = false;
             printBtn.Enabled = false;
             macTextBox.ReadOnly = true;
             statusText.ReadOnly = true;
+            logBox.ReadOnly = true;
         }
 
-        private void RunBtn_Click(object sender, EventArgs e)
+        private async void RunBtn_Click(object sender, EventArgs e)
         {
             if (imeiTextBox.Text == "" || imeiTextBox.Text == null)
             {
-                MessageBox.Show("Type a serial number to program execution.");
+                MessageBox.Show("Type a IMEI number to program execution.");
+                return;
+            }
+            bool isImeiValid = ValidateImeiInput(imeiTextBox.Text);
+            if (isImeiValid == false)
+            {
+                MessageBox.Show("Imei does not match with pattern.");
                 return;
             }
             printBtn.Enabled = false;
@@ -54,52 +65,128 @@ namespace OneRF_CATM
 
                 // Inicia o processo
                 process.Start();
+                statusText.Text = "Flashing memory...";
+                string mac = "";
+
+                // Configura o FileSystemWatcher para monitorar alterações no arquivo output.txt
+                FileSystemWatcher watcher = new FileSystemWatcher();
+                watcher.Path = Path.GetDirectoryName(outputFilePath);
+                watcher.Filter = Path.GetFileName(outputFilePath);
+                watcher.NotifyFilter = NotifyFilters.LastWrite;
+                watcher.Changed += (s, args) =>
+                {
+                    // Executa a lógica em uma nova thread usando Task.Run
+                    Task.Run(() =>
+                    {
+                        // Lê as novas linhas adicionadas no arquivo output.txt
+                        string[] newLines = File.ReadAllLines(outputFilePath);
+
+                        // Atualiza o logBox na thread de interface do usuário e verifica se o mac existe
+                        logBox.BeginInvoke(new Action(() =>
+                        {
+                            foreach (string line in newLines)
+                            {
+                                if (line.Contains("ReadPriIeee:"))
+                                {
+                                    int startIndex = line.IndexOf("ReadPriIeee:") + "ReadPriIeee:".Length;
+                                    mac = line.Substring(startIndex).Trim();
+                                }
+                                logBox.AppendText(line + Environment.NewLine);
+                            }
+                            string messageResult = newLines[newLines.Length - 1];
+                            if (messageResult == "Success" && mac != "")
+                            {
+                                statusText.Text = messageResult;
+                                macTextBox.Text = mac;
+                                printBtn.Enabled = true;
+                            }
+                            else
+                            {
+                                statusText.Text = "Error";
+                                macTextBox.Text = "Not founded";
+                            }
+                        }));
+                    });
+                };
+                watcher.EnableRaisingEvents = true;
 
                 // Aguarda a conclusão do processo
-                process.WaitForExit();
+                await Task.Run(() => process.WaitForExit());
 
-                if (File.Exists(outputFilePath))
-                {
-                    string[] lines = File.ReadAllLines(outputFilePath);
-                    string mac = "";
-                    foreach (string line in lines)
-                    {
-                        if (line.Contains("ReadPriIeee:"))
-                        {
-                            int startIndex = line.IndexOf("ReadPriIeee:") + "ReadPriIeee:".Length;
-                            mac = line.Substring(startIndex).Trim();
-                        }
-                        // Exibe o output no RichTextBox (na thread de interface do usuário)
-                        logBox.Invoke(new Action(() =>
-                        {
-                            logBox.AppendText(line + Environment.NewLine);
-                        }));
-                    }
-                    string messageResult = lines[lines.Length - 1];
-                    if (messageResult == "Success" && mac != "")
-                    {
-                        statusText.Text = messageResult;
-                        macTextBox.Text = mac;
-                        printBtn.Enabled = true;
-                    }
-                    else
-                    {
-                        statusText.Text = "Error";
-                        macTextBox.Text = "Not founded";
-                    }
-                    // Exclui o arquivo de output, se necessário
-                    File.Delete(outputFilePath);
-                }
+                // Fecha o FileSystemWatcher
+                watcher.EnableRaisingEvents = false;
+                watcher.Dispose();
+
+                // Deleta o arquivo output.txt
+                File.Delete(outputFilePath);
+
+                // Cria os logs para os dispositivos
                 CreateLogFiles(macTextBox.Text, imeiTextBox.Text, statusText.Text);
 
+                ClearBtn.Enabled = true;
                 // Fecha e libera os recursos do processo
                 process.Close();
                 process.Dispose();
             }
         }
 
+        private bool ValidateData(string mac, string imei)
+        {
+            try
+            {
+                if (mac != "" && imei != "")
+                {
+                    string imeiPattern = @"\b\d{15}\b"; // Padrão para IMEI: 15 dígitos numéricos
+                    string macPattern = @"\b([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})\b"; // Padrão para MAC: formato xx:xx:xx:xx:xx:xx ou xx-xx-xx-xx-xx-xx
+                    bool isMacValid = Regex.IsMatch(mac, macPattern);
+                    bool isImeiValid = Regex.IsMatch(imei, imeiPattern);
+                    return isMacValid && isImeiValid;
+                } else
+                {
+                    return false;
+                }
+            }
+            catch (Exception error) {
+                MessageBox.Show($"Failed trying to validate mac and imei pattern: {error.Message}");
+                return false;
+            }
+        }
+
+        private bool ValidateImeiInput(string imei)
+        {
+            try
+            {
+                if (imei != "")
+                {
+                    string imeiPattern = @"\b\d{15}\b"; // Padrão para IMEI: 15 dígitos numéricos
+                    bool isImeiValid = Regex.IsMatch(imei, imeiPattern);
+                    return isImeiValid;
+                } else
+                {
+                    return false;
+                }
+            } catch (Exception error)
+            {
+                MessageBox.Show($"Failed trying to valiade IMEI input: ${error.Message}");
+                return false;
+            }
+        }
+
         private void printBtn_Click(object sender, EventArgs e)
         {
+            if (imeiTextBox.Text != "" && macTextBox.Text != "")
+            {
+                bool isValidData = ValidateData(macTextBox.Text, imeiTextBox.Text);
+                if (isValidData == false)
+                {
+                    MessageBox.Show("Mac or imei does not match with their pattern");
+                    return;
+                }
+            } else
+            {
+                MessageBox.Show("Mac or imei can not be empty for priting.");
+                return;
+            }
             List<DiscoveredUsbPrinter> printers = discoverUsbPrinters();
             StringBuilder message = new StringBuilder();
             string printerSymbolicName = "";
@@ -203,6 +290,7 @@ namespace OneRF_CATM
             {
                 MessageBox.Show($"Failed trying to print tag: {error.Message}");
             }
+            ClearFormData();
         }
 
         private void CreateLogFiles(string deviceMac, string imei, string statusMessage)
@@ -242,5 +330,31 @@ namespace OneRF_CATM
             }
         }
 
+        private void ClearFormData()
+        {
+            try
+            {
+                imeiTextBox.Text = "";
+                statusText.Text = "";
+                macTextBox.Text = "";
+                logBox.Clear();
+                printBtn.Enabled = false;
+                ClearBtn.Enabled = false;
+            } catch (Exception error)
+            {
+                MessageBox.Show($"Failed trying to clear data form: {error.Message}");
+            }
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearFormData();
+            } catch (Exception error)
+            {
+                MessageBox.Show($"Failed trying to run clear function: {error.Message}");
+            }
+        }
     }
 }

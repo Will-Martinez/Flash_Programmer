@@ -38,6 +38,7 @@
             label3 = new Label();
             macTextBox = new TextBox();
             printBtn = new Button();
+            ClearBtn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -87,7 +88,7 @@
             // 
             statusText.Location = new Point(72, 119);
             statusText.Name = "statusText";
-            statusText.Size = new Size(100, 23);
+            statusText.Size = new Size(141, 23);
             statusText.TabIndex = 6;
             // 
             // label3
@@ -116,11 +117,22 @@
             printBtn.UseVisualStyleBackColor = true;
             printBtn.Click += printBtn_Click;
             // 
+            // ClearBtn
+            // 
+            ClearBtn.Location = new Point(528, 52);
+            ClearBtn.Name = "ClearBtn";
+            ClearBtn.Size = new Size(75, 23);
+            ClearBtn.TabIndex = 10;
+            ClearBtn.Text = "Clear";
+            ClearBtn.UseVisualStyleBackColor = true;
+            ClearBtn.Click += ClearBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ClearBtn);
             Controls.Add(printBtn);
             Controls.Add(macTextBox);
             Controls.Add(label3);
@@ -149,5 +161,6 @@
         private Label label3;
         private TextBox macTextBox;
         private Button printBtn;
+        private Button ClearBtn;
     }
 }
