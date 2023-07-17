@@ -8,4 +8,72 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Zebra.Printer.SDK" Version="2.15.2634" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>_zebraSDK\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Csv">
+      <HintPath>_zebraSDK\Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP">
+      <HintPath>_zebraSDK\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions">
+      <HintPath>_zebraSDK\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel">
+      <HintPath>_zebraSDK\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>_zebraSDK\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Card.Core">
+      <HintPath>ZebraSDK\SdkApi.Card.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Card.Desktop">
+      <HintPath>ZebraSDK\SdkApi.Card.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Core">
+      <HintPath>_zebraSDK\SdkApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop">
+      <HintPath>_zebraSDK\SdkApi.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop.Usb">
+      <HintPath>_zebraSDK\SdkApi.Desktop.Usb.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSnmpLib">
+      <HintPath>_zebraSDK\SharpSnmpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.WindowsRuntime">
+      <HintPath>_zebraSDK\System.Runtime.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows">
+      <HintPath>_zebraSDK\Windows.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="SdkApi.Desktop.CommandLine">
+      <HintPath>_zebraSDK\ZSDK.API.DESKTOP.exe</HintPath>
+    </Reference>
+    <Reference Include="ZCSCSilex">
+      <HintPath>ZebraSDK\ZCSCSilex.dll</HintPath>
+    </Reference>
+    <Reference Include="ZCSmartCardLib">
+      <HintPath>ZebraSDK\ZCSmartCardLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ZebraSCUtility">
+      <HintPath>ZebraSDK\ZebraSCUtility.exe</HintPath>
+    </Reference>
+    <Reference Include="ZMotifPrinter4cs">
+      <HintPath>ZebraSDK\ZMotifPrinter4cs.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXPSCReader">
+      <HintPath>ZebraSDK\ZXPSCReader.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
-            textBox1 = new TextBox();
+            imeiTextBox = new TextBox();
             RunBtn = new Button();
             logBox = new RichTextBox();
-            progressBar1 = new ProgressBar();
             label2 = new Label();
-            textBox2 = new TextBox();
+            statusText = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            macTextBox = new TextBox();
+            printBtn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -44,16 +45,16 @@
             label1.AutoSize = true;
             label1.Location = new Point(72, 34);
             label1.Name = "label1";
-            label1.Size = new Size(22, 15);
+            label1.Size = new Size(30, 15);
             label1.TabIndex = 0;
-            label1.Text = "SN";
+            label1.Text = "IMEI";
             // 
-            // textBox1
+            // imeiTextBox
             // 
-            textBox1.Location = new Point(72, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(141, 23);
-            textBox1.TabIndex = 1;
+            imeiTextBox.Location = new Point(72, 52);
+            imeiTextBox.Name = "imeiTextBox";
+            imeiTextBox.Size = new Size(141, 23);
+            imeiTextBox.TabIndex = 1;
             // 
             // RunBtn
             // 
@@ -67,18 +68,11 @@
             // 
             // logBox
             // 
-            logBox.Location = new Point(12, 210);
+            logBox.Location = new Point(12, 163);
             logBox.Name = "logBox";
-            logBox.Size = new Size(776, 228);
+            logBox.Size = new Size(776, 275);
             logBox.TabIndex = 3;
             logBox.Text = "";
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(12, 181);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(776, 23);
-            progressBar1.TabIndex = 4;
             // 
             // label2
             // 
@@ -89,12 +83,12 @@
             label2.TabIndex = 5;
             label2.Text = "Status";
             // 
-            // textBox2
+            // statusText
             // 
-            textBox2.Location = new Point(72, 119);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 6;
+            statusText.Location = new Point(72, 119);
+            statusText.Name = "statusText";
+            statusText.Size = new Size(100, 23);
+            statusText.TabIndex = 6;
             // 
             // label3
             // 
@@ -105,28 +99,40 @@
             label3.TabIndex = 7;
             label3.Text = "Device Mac";
             // 
-            // textBox3
+            // macTextBox
             // 
-            textBox3.Location = new Point(265, 119);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(126, 23);
-            textBox3.TabIndex = 8;
+            macTextBox.Location = new Point(265, 119);
+            macTextBox.Name = "macTextBox";
+            macTextBox.Size = new Size(167, 23);
+            macTextBox.TabIndex = 8;
+            // 
+            // printBtn
+            // 
+            printBtn.Location = new Point(653, 119);
+            printBtn.Name = "printBtn";
+            printBtn.Size = new Size(75, 23);
+            printBtn.TabIndex = 9;
+            printBtn.Text = "Print";
+            printBtn.UseVisualStyleBackColor = true;
+            printBtn.Click += printBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox3);
+            Controls.Add(printBtn);
+            Controls.Add(macTextBox);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(statusText);
             Controls.Add(label2);
-            Controls.Add(progressBar1);
             Controls.Add(logBox);
             Controls.Add(RunBtn);
-            Controls.Add(textBox1);
+            Controls.Add(imeiTextBox);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "OneRF CATM Tool";
             ResumeLayout(false);
             PerformLayout();
@@ -135,13 +141,13 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox imeiTextBox;
         private Button RunBtn;
         private RichTextBox logBox;
-        private ProgressBar progressBar1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox statusText;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox macTextBox;
+        private Button printBtn;
     }
 }

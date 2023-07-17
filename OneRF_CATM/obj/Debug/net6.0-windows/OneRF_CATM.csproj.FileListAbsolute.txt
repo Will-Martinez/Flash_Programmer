@@ -15,3 +15,42 @@ C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\refin
 C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.pdb
 C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.genruntimeconfig.cache
 C:\Users\willa\source\repos\OneRF_CATM\OneRF_CATM\obj\Debug\net6.0-windows\ref\OneRF_CATM.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.exe
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.deps.json
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.runtimeconfig.json
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\OneRF_CATM.pdb
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.AssemblyReference.cache
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.Form1.resources
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.GenerateResource.cache
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.AssemblyInfoInputs.cache
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.AssemblyInfo.cs
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.CoreCompileInputs.cache
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\refint\OneRF_CATM.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.pdb
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.genruntimeconfig.cache
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\ref\OneRF_CATM.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\Csv.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\FluentFTP.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SharpSnmpLib.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Core.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZebraPrinterSdk.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\obj\Debug\net6.0-windows\OneRF_CATM.csproj.CopyComplete
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Card.Core.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Card.Desktop.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Desktop.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Desktop.Usb.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZCSCSilex.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZCSmartCardLib.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZebraSCUtility.exe
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZMotifPrinter4cs.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\ZXPSCReader.dll
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Card.Core.xml
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Card.Desktop.xml
+C:\Users\Wilman Martinez\source\repos\OneRF_CATM_Tool\OneRF_CATM\bin\Debug\net6.0-windows\SdkApi.Desktop.xml
