@@ -1,0 +1,4 @@
+Status: Error
+MAC: Not founded
+IMEI: 123456789012345
+Timestamp: 24/07/2023 14:15:09

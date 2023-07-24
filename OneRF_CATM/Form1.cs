@@ -141,12 +141,14 @@ namespace OneRF_CATM
                     bool isMacValid = Regex.IsMatch(mac, macPattern);
                     bool isImeiValid = Regex.IsMatch(imei, imeiPattern);
                     return isMacValid && isImeiValid;
-                } else
+                }
+                else
                 {
                     return false;
                 }
             }
-            catch (Exception error) {
+            catch (Exception error)
+            {
                 MessageBox.Show($"Failed trying to validate mac and imei pattern: {error.Message}");
                 return false;
             }
@@ -161,11 +163,13 @@ namespace OneRF_CATM
                     string imeiPattern = @"\b\d{15}\b"; // Padrão para IMEI: 15 dígitos numéricos
                     bool isImeiValid = Regex.IsMatch(imei, imeiPattern);
                     return isImeiValid;
-                } else
+                }
+                else
                 {
                     return false;
                 }
-            } catch (Exception error)
+            }
+            catch (Exception error)
             {
                 MessageBox.Show($"Failed trying to valiade IMEI input: ${error.Message}");
                 return false;
@@ -182,7 +186,8 @@ namespace OneRF_CATM
                     MessageBox.Show("Mac or imei does not match with their pattern");
                     return;
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Mac or imei can not be empty for priting.");
                 return;
@@ -340,7 +345,8 @@ namespace OneRF_CATM
                 logBox.Clear();
                 printBtn.Enabled = false;
                 ClearBtn.Enabled = false;
-            } catch (Exception error)
+            }
+            catch (Exception error)
             {
                 MessageBox.Show($"Failed trying to clear data form: {error.Message}");
             }
@@ -351,7 +357,8 @@ namespace OneRF_CATM
             try
             {
                 ClearFormData();
-            } catch (Exception error)
+            }
+            catch (Exception error)
             {
                 MessageBox.Show($"Failed trying to run clear function: {error.Message}");
             }
