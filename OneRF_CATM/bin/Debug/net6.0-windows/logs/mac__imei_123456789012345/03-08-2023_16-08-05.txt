@@ -1,0 +1,4 @@
+Status: Flashing memory...
+MAC: 
+IMEI: 123456789012345
+Timestamp: 03/08/2023 16:08:05
